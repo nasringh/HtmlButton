@@ -1,0 +1,38 @@
+button{
+  font-weight: bold;
+  font-size: 1.5rem;
+  border: solid 2px #8e857b;
+  background-image: linear-gradient(to left, #ef9544, #f2af64);
+  background-color: #f1ac5f;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  align-items: center;
+}
+
+button span{
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-left: 2rem;
+  position: relative;
+}
+
+button span::before, button span::after{
+  content: "";
+  display: block;
+  width: .25rem;
+  height: 1.5rem;
+  background-color: #000;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+}
+button span::before{
+  transform: translate(50%, -50%) rotate(-45deg);
+}
+button span::after{
+  transform: translate(50%, -50%) rotate(45deg);
+}
