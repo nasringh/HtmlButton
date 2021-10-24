@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?6hvdb');
+  src:  url('fonts/icomoon.eot?6hvdb#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6hvdb') format('truetype'),
+    url('fonts/icomoon.woff?6hvdb') format('woff'),
+    url('fonts/icomoon.svg?6hvdb#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/* common style for button */
 button{
   font-weight: bold;
   font-size: 1.5rem;
@@ -9,8 +21,8 @@ button{
   padding: 1rem;
   align-items: center;
 }
-
-button span{
+/* ==== first button ==== */
+.first-button span{
   display: block;
   width: 4.5rem;
   height: 4.5rem;
@@ -20,7 +32,7 @@ button span{
   position: relative;
 }
 
-button span::before, button span::after{
+.first-button span::before, .first-button span::after{
   content: "";
   display: block;
   width: .25rem;
@@ -30,9 +42,23 @@ button span::before, button span::after{
   right: 50%;
   top: 50%;
 }
-button span::before{
+.first-button span::before{
   transform: translate(50%, -50%) rotate(-45deg);
 }
-button span::after{
+.first-button span::after{
   transform: translate(50%, -50%) rotate(45deg);
+}
+
+/* ==== second button ==== */
+.second-button::after{
+  font-family: 'icomoon' !important;
+  font-size: 2.5rem;
+  content: "\e900";
+  line-height: 4.5rem;
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-left: 1rem;
 }
